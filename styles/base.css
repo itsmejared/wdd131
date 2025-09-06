@@ -94,7 +94,7 @@ main h1 {
   text-align: justify;
 }
 
-.card-head {
+.card-title {
   background-color: var(--color-primary);
   color: var(--color-light);
   padding: var(--spacing-sm);
