@@ -1,78 +1,144 @@
-:root{
-  --bg:#ffffff;
-  --fg:#ffffff;
-  --accent:#2E6E4C;
-  --muted:#6b7280;
-  --card:#3c0a64;
-  --link:#ffffff;
-  --link-hover:#2E6E4C;
-  --radius:14px;
-  --bar:#3c0a64;
+:root {
+  --bg: #ffffff;
+  --fg: #ffffff;
+  --accent: #2e6e4c;
+  --muted: #6b7280;
+  --card: #3c0a64;
+  --link: #ffffff;
+  --link-hover: #2e6e4c;
+  --radius: 14px;
+  --bar: #3c0a64;
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-
-body{
-  font-family:"Open Sans",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-  color:var(--fg);
-  background:var(--bg);
-  line-height:1.5;
-  display:flex; flex-direction:column;
-  min-height:100vh;    
-  min-height:100svh;   
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
 }
 
-header{
-  border-bottom:1px solid #e5e7eb;
-  padding:0.5rem 1rem;
-  background:var(--bar);
-  position:sticky; top:0; z-index:10;
+body {
+  font-family: "Open Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100svh;
 }
 
-.brand{ display:flex; align-items:center; justify-content:space-between; gap:1rem; }
-h1{ font-family:"Bebas Neue",sans-serif; font-size:2rem; letter-spacing:.5px; }
-
-.menu{
-  font-size:1.5rem; border:1px solid #94a3b8; background:#130101;
-  padding:.25rem .5rem; border-radius:.5rem; cursor:pointer; color:var(--fg);
+header {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0.5rem 1rem;
+  background: var(--bar);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-.nav{ display:none; flex-direction:column; gap:.25rem; padding:.5rem 0 0; }
-.nav a{ text-decoration:none; color:var(--link); padding:.5rem .75rem; border-radius:.5rem; display:block; }
-.nav a:hover,.nav a:focus{ background:var(--card); color:var(--link-hover); }
-.nav.open{ display:flex; }
-
-main{
-  flex:1 0 auto;
-  max-width:800px;
-  margin:1rem auto;
-  padding:0 1rem 2rem;
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
 }
 
-h2{
-  font-family:"Bebas Neue",sans-serif; font-size:1.75rem;
-  margin:.5rem 0 1rem; text-align:center;
+.menu {
+  font-size: 1.5rem;
+  border: 1px solid #94a3b8;
+  background: #130101;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: var(--fg);
+}
+
+.nav {
+  display: none;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.5rem 0 0;
+}
+.nav a {
+  text-decoration: none;
+  color: var(--link);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  display: block;
+}
+.nav a:hover,
+.nav a:focus {
+  background: var(--card);
+  color: var(--link-hover);
+}
+.nav.open {
+  display: flex;
+}
+
+main {
+  flex: 1 0 auto;
+  max-width: 800px;
+  margin: 1rem auto;
+  padding: 0 1rem 2rem;
+}
+
+h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.75rem;
+  margin: 0.5rem 0 1rem;
+  text-align: center;
   color: var(--accent);
 }
 
-.grid{ display:grid; grid-template-columns:1fr; gap:1rem; }
-
-figure{
-  background:var(--card); border-radius:14px; overflow:hidden;
-  box-shadow:0 2px 12px rgba(27,73,101,.08);
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 
-.grid img{ width:100%; height:220px; object-fit:cover; display:block; }
-
-figcaption{ padding:.75rem 1rem; font-weight:600; }
-
-footer{
-  border-top:1px solid #e5e7eb; padding:1rem; text-align:center;
-  background:var(--bar); margin-top:1rem;
+figure {
+  background: var(--card);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(27, 73, 101, 0.08);
 }
-footer .muted{ color:var(--muted); font-size:.95rem; }
 
-@media (min-width: 480px){
-  .grid{ grid-template-columns: repeat(2, 1fr); }
+.grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+figcaption {
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+}
+
+footer {
+  border-top: 1px solid #e5e7eb;
+  padding: 1rem;
+  text-align: center;
+  background: var(--bar);
+  margin-top: 1rem;
+}
+footer .muted {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (min-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
