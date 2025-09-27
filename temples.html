@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+    <meta name="author" content="Jared Huayta">
+    <meta name="description" content="My favorite temples around the world">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+
+    <script src="scripts/temples.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <h1>Temple Album</h1>
+            <button id="menu" class="menu" aria-label="Open menu" aria-expanded="false"
+                aria-controls="primary-nav">☰</button>
+        </div>
+        <nav id="primary-nav" class="nav">
+            <a href="#">Home</a>
+            <a href="#">Old</a>
+            <a href="#">New</a>
+            <a href="#">Large</a>
+            <a href="#">Small</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Temples Gallery</h2>
+        <section class="grid">
+            <figure>
+                <img src="images/temple/los_olivos_peru.jpeg" alt="Los Olivos Peru Temple">
+                <figcaption>Los Olivos, Per&uacute;</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple/aba_nigeria.jpeg" alt="Aba Nigeria Temple">
+                <figcaption>Aba, Nigeri</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple/austin_texas.jpeg" alt="Austin Texas Temple">
+                <figcaption>Austin, Texas</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple/boston_massachusetts.jpeg" alt="Boston Massachusetts Temple">
+                <figcaption>Boston, Massachusetts</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple/brisbane_australia.jpeg" alt="Brisbane Australia Temple">
+                <figcaption>Brisbane, Australia</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple/colonia_juarez_mexico.jpeg" alt="Colonia Juarez Mexico Temple">
+                <figcaption>Colonia Juarez, Mexico</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple/denver_colorado.jpeg" alt="Denver Colorado Temple">
+                <figcaption>Denver, Colorado</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple/guayaquil_ecuador.jpeg" alt="Guayaquil Ecuador Temple">
+                <figcaption>Guayaquil, Ecuador</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple/kansas_missouri.jpeg" alt="Kansas City Missouri Temple">
+                <figcaption>Kansas City, Missouri</figcaption>
+            </figure>
+        </section>
+    </main>
+    <footer>
+        <p>© <span id="currentyear"></span> • Jared Huayta • Lima, Per&uacute;</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
