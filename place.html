@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peru | Country Page</title>
+    <meta name="author" content="Jared Huayta">
+    <meta name="description" content="Country page for Peru">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/place.css">
+
+    <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>Per&uacute;</h1>
+        <div class="accent-bar" aria-hidden="true"></div>
+    </header>
+
+    <main>
+        <section class="hero" aria-label="Hero">
+            <picture>
+                <!-- Wide image -->
+                <source media="(min-width: 768px)" srcset="
+                images/place/mp_1000.webp 1000w,
+                images/place/mp_1400.webp 1400w,
+                images/place/mp_1800.webp 1800w" sizes="(min-width: 1200px) 1200px, 92vw" type="image/webp" />
+                <!-- Mobile image -->
+                <source media="(max-width: 767px)" srcset="
+            images/place/llama_400.webp 400w,
+            images/place/llama_700.webp 700w" sizes="100vw" type="image/webp" />
+                <img src="images/place/llama_700.webp" alt="Peruvian Llama" width="1400" height="700" loading="eager">
+            </picture>
+
+            <section class="card data" aria-labelledby="data-title">
+                <h3 id="data-title">Data</h3>
+                <ul class="kv">
+                    <li><span class="k">Area:</span><span class="v">1,285,216 sq km</span></li>
+                    <li><span class="k">Population:</span><span class="v">≈ 34,000,000</span></li>
+                    <li><span class="k">Capital:</span><span class="v">Lima</span></li>
+                    <li><span class="k">Languages:</span><span class="v">Spanish, Quechua, Aymara</span></li>
+                    <li><span class="k">Currency:</span><span class="v">Peruvian Sol (PEN)</span></li>
+                    <li><span class="k">Time Zone:</span><span class="v">UTC−5</span></li>
+                    <li><span class="k">Calling Code:</span><span class="v">+51</span></li>
+                    <li><span class="k">Internet TLD:</span><span class="v">.pe</span></li>
+                </ul>
+            </section>
+
+            <section class="card weather" aria-labelledby="weather-title">
+                <h3 id="weather-title">Weather</h3>
+
+                <figure class="weather-icon-mobile">
+                    <img src="images/place/weather.svg" alt="Weather icon" width="80" height="80">
+                </figure>
+
+                <ul class="kv">
+                    <li><span class="k">Temperature:</span><span class="v"><span id="temp-value">9</span> °C</span>
+                    </li>
+                    <li><span class="k">Conditions:</span><span class="v">Partly Cloudy</span></li>
+                    <li><span class="k">Wind:</span><span class="v"><span id="wind-value">15</span> km/h</span></li>
+                    <li><span class="k">Wind Chill:</span><span class="v"><span id="windchill">N/A</span></span></li>
+                </ul>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> • Jared Huayta • Lima, Per&uacute;</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

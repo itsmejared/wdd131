@@ -1,0 +1,15 @@
+1. Project Subject
+My website will be for a photography business that offers professional photo services such as portraits, 
+weddings, events, and product photography.
+
+2. Description of Planned Content
+The site will include:
+
+- A homepage that introduces the business and shows some featured photos.
+- A services page with details and pricing packages.
+- A contact page with a form so people can reach out and book a session.
+
+3. Reason
+I chose this subject because photography is both a creative passion and a valuable service. 
+I want to have a place where people can see my work, learn about my services, and easily get 
+in touch with me if they’re interested.
