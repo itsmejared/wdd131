@@ -1,7 +1,7 @@
 :root {
   /* Brand Colors */
-  --brand-red: #d21033;
-  --brand-green: #00784a;
+  --brand-red: #b00d29;
+  --brand-green: #00663e;
 
   /* Neutrals */
   --surface: #ffffff;
@@ -138,6 +138,7 @@ footer {
   background: var(--brand-red);
   color: var(--surface);
   font-size: 0.95rem;
+  font-weight: bold;
 }
 
 @media (min-width: 768px) {
@@ -180,7 +181,6 @@ footer {
     line-height: 1;
     letter-spacing: 0.4px;
     text-transform: none;
-    opacity: 0.95;
   }
 
   .weather .weather-icon-mobile {
