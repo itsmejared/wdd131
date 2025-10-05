@@ -1,0 +1,33 @@
+@media (min-width: 720px) {
+  .menu {
+    display: none;
+  }
+  .nav {
+    display: flex !important;
+    flex-direction: row;
+    gap: 0.5rem;
+
+    max-height: none !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .brand {
+    justify-content: flex-start;
+  }
+
+  main {
+    max-width: 1200px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
