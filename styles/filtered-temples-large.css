@@ -9,7 +9,7 @@
 
     max-height: none !important;
     opacity: 1 !important;
-    pointer-events: auto !important;
+    pointer-events: initial !important;
   }
 
   header {
