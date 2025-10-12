@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <meta name="author" content="Jared Huayta">
+    <meta name="description" content="WDD131 - Product Review Form">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/form-large.css">
+
+    <script src="scripts/form.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>Product Review</h1>
+        <p class="subtitle">Share your experience — help others decide.</p>
+    </header>
+    <main>
+        <form id="reviewForm" action="review.html" method="get" class="card form-grid">
+            <label for="product">Product Name <span aria-hidden="true">*</span></label>
+            <select id="product" name="product" required>
+                <option value="" selected disabled>Choose a product…</option>
+            </select>
+
+            <fieldset class="rating">
+                <legend>Overall Rating <span aria-hidden="true">*</span></legend>
+                <div class="stars">
+                    <label><input type="radio" name="rating" value="1" required checked> ★</label>
+                    <label><input type="radio" name="rating" value="2"> ★★</label>
+                    <label><input type="radio" name="rating" value="3"> ★★★</label>
+                    <label><input type="radio" name="rating" value="4"> ★★★★</label>
+                    <label><input type="radio" name="rating" value="5"> ★★★★★</label>
+                </div>
+            </fieldset>
+
+            <label for="install">Date of Installation</label>
+            <input type="date" id="install" name="install">
+
+            <fieldset>
+                <legend>Which features did you find useful? <span class="hint">(check all that apply)</span></legend>
+                <label class="check"><input type="checkbox" name="features" value="Durability"> Durability</label>
+                <label class="check"><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label>
+                <label class="check"><input type="checkbox" name="features" value="Performance"> Performance</label>
+                <label class="check"><input type="checkbox" name="features" value="Design"> Design</label>
+            </fieldset>
+
+            <label for="written">Written Review <span class="hint">(optional)</span></label>
+            <textarea id="written" name="written" rows="6" minlength="10"
+                placeholder="What stood out to you? Pros, cons, tips…"></textarea>
+
+            <label for="user">Your Name <span class="hint">(optional)</span></label>
+            <input id="user" name="user" type="text" inputmode="text" autocomplete="name" placeholder="e.g., Alex R.">
+
+            <button class="cta" type="submit">Post Review</button>
+        </form>
+    </main>
+    <footer>
+        <p>© <span id="currentyear"></span> • Jared Huayta • Lima, Per&uacute;</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

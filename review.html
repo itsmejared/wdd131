@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <meta name="author" content="Jared Huayta">
+    <meta name="description" content="WDD131 - Product Review Form">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/form-large.css">
+
+    <script src="scripts/review.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>Thank you!</h1>
+        <p class="subtitle">Your review was submitted successfully.</p>
+    </header>
+    <main class="center-page">
+        <section class="card" id="thanks">
+            <h2 class="sr-only">Submission summary</h2>
+
+            <p>Your review has been submitted successfully.</p>
+            <p id="review-counter"></p>
+            <a class="cta linklike" href="form.html">← Write another review</a>
+
+        </section>
+    </main>
+    <footer>
+        <p>© <span id="currentyear"></span> • Jared Huayta • Lima, Per&uacute;</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
