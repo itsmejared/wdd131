@@ -27,6 +27,7 @@
     </header>
     <main>
         <form id="reviewForm" action="review.html" method="get" class="card form-grid">
+
             <label for="product">Product Name <span aria-hidden="true">*</span></label>
             <select id="product" name="product" required>
                 <option value="" selected disabled>Choose a product…</option>
@@ -35,11 +36,20 @@
             <fieldset class="rating">
                 <legend>Overall Rating <span aria-hidden="true">*</span></legend>
                 <div class="stars">
-                    <label><input type="radio" name="rating" value="1" required checked> ★</label>
-                    <label><input type="radio" name="rating" value="2"> ★★</label>
-                    <label><input type="radio" name="rating" value="3"> ★★★</label>
-                    <label><input type="radio" name="rating" value="4"> ★★★★</label>
-                    <label><input type="radio" name="rating" value="5"> ★★★★★</label>
+                    <input type="radio" id="rate1" name="rating" value="1" required checked>
+                    <label for="rate1">★</label>
+
+                    <input type="radio" id="rate2" name="rating" value="2">
+                    <label for="rate2">★★</label>
+
+                    <input type="radio" id="rate3" name="rating" value="3">
+                    <label for="rate3">★★★</label>
+
+                    <input type="radio" id="rate4" name="rating" value="4">
+                    <label for="rate4">★★★★</label>
+
+                    <input type="radio" id="rate5" name="rating" value="5">
+                    <label for="rate5">★★★★★</label>
                 </div>
             </fieldset>
 
@@ -48,10 +58,18 @@
 
             <fieldset>
                 <legend>Which features did you find useful? <span class="hint">(check all that apply)</span></legend>
-                <label class="check"><input type="checkbox" name="features" value="Durability"> Durability</label>
-                <label class="check"><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label>
-                <label class="check"><input type="checkbox" name="features" value="Performance"> Performance</label>
-                <label class="check"><input type="checkbox" name="features" value="Design"> Design</label>
+
+                <input type="checkbox" id="durability" name="features" value="Durability">
+                <label for="durability">Durability</label>
+
+                <input type="checkbox" id="ease" name="features" value="Ease of Use">
+                <label for="ease">Ease of Use</label>
+
+                <input type="checkbox" id="performance" name="features" value="Performance">
+                <label for="performance">Performance</label>
+
+                <input type="checkbox" id="design" name="features" value="Design">
+                <label for="design">Design</label>
             </fieldset>
 
             <label for="written">Written Review <span class="hint">(optional)</span></label>
