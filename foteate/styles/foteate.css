@@ -26,26 +26,19 @@ body {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  text-align: left;
   min-height: 100vh;
   min-height: 100svh;
 }
 
 /* Typography */
+h1, h2 {
+  font-family: "Bebas Neue", sans-serif;
+  line-height: 1.2;
+}
 
 h2 {
-  font-family: "Bebas Neue", sans-serif;
   color: var(--primary);
-  line-height: 1.2;
   margin-bottom: 0.5rem;
-}
-
-h1 {
-  font-family: "Bebas Neue", sans-serif;
-}
-
-section {
-  margin-bottom: 2rem;
 }
 
 main {
@@ -73,9 +66,9 @@ header {
 }
 
 .logo {
-  height: 40px; /* fits nicely in header */
+  height: 40px;
   width: auto;
-  border-radius: 8px; /* optional: smooth corners */
+  border-radius: 8px;
   object-fit: contain;
 }
 
@@ -89,6 +82,7 @@ header {
   color: var(--white);
 }
 
+/* Navigation */
 .nav {
   display: flex;
   flex-direction: column;
@@ -102,7 +96,7 @@ header {
 }
 
 .nav.open {
-  max-height: 300px; /* enough to show all links */
+  max-height: 300px;
   opacity: 1;
   pointer-events: initial !important;
 }
@@ -131,77 +125,6 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Gallery */
-.gallery {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 1rem;
-}
-
-.thumbnail {
-  width: 180px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.thumbnail:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Modal */
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.85);
-  justify-content: center;
-  align-items: center;
-  z-index: 100;
-}
-
-/* Show modal when targeted */
-.modal:target {
-  display: flex;
-}
-
-/* Clickable background area */
-.modal a.close-area {
-  position: absolute;
-  inset: 0;
-  display: block;
-}
-
-/* Image inside modal */
-.modal img {
-  position: relative;
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-  z-index: 1;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-}
-
-/* Close Button */
-.close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  color: var(--white);
-  font-size: 2rem;
-  text-decoration: none;
-  font-weight: bold;
-  z-index: 2;
-  transition: color 0.2s;
-}
-
-.close:hover {
-  color: #ff5555;
-}
-
 /* Responsive */
 @media (min-width: 720px) {
   .brand {
@@ -211,11 +134,11 @@ footer {
   .menu {
     display: none;
   }
+
   .nav {
     display: flex !important;
     flex-direction: row;
     gap: 0.5rem;
-
     max-height: none !important;
     opacity: 1 !important;
     pointer-events: initial !important;
@@ -230,15 +153,11 @@ footer {
   }
 
   .nav a {
-    text-decoration: none;
-    color: var(--white);
-    padding: 0.5rem 0.75rem;
-    border-radius: 0.5rem;
     display: inline-block;
     position: relative;
   }
 
-  /* Add the pipe separator after each link */
+  /* Pipe separators between links */
   .nav a:not(:last-child)::after {
     content: " |";
     color: var(--white);
