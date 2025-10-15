@@ -37,6 +37,7 @@ if (form && modal && message && sessionSelect) {
     { value: "outdoor", label: "Outdoor" },
     { value: "family", label: "Family Session" },
     { value: "graduation", label: "Graduation" },
+    { value: "custom", label: "Custom" },
   ];
 
   window.addEventListener("DOMContentLoaded", () => {
