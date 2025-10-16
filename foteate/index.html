@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Plan - Foteate with Aura</title>
-    <meta name="description" content="Site plan for the photography project Foteate with Aura.">
+    <title>Foteate with Aura – Capture Life’s Most Beautiful Moments</title>
+    <meta name="description"
+        content="Welcome to Foteate with Aura. Discover professional photography sessions for portraits, weddings, events, and more. Let us help you preserve your best memories with creativity and style.">
     <meta name="author" content="Jared Huayta">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300;400;600;700&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" href="styles/foteate.css">
 
     <link rel="icon" href="images/logo.png" type="image/png">
@@ -22,12 +22,13 @@
 <body>
     <header>
         <div class="brand">
-            <img src="images/logo.png" alt="Logo of Foteate with Aura" class="logo">
+            <img src="images/logo.png" alt="Logo of Foteate with Aura" class="logo" loading="lazy">
             <h1>Foteate with Aura</h1>
-            <button id="menu" class="menu" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">☰</button>
+            <button id="menu" class="menu" aria-label="Open menu" aria-expanded="false"
+                aria-controls="primary-nav">☰</button>
         </div>
         <nav id="primary-nav" class="nav" aria-label="Main navigation">
-            <a href="index.html">Home</a>
+            <a href="index.html" aria-current="page">Home</a>
             <a href="services.html">Services</a>
             <a href="book.html">Book with Us</a>
         </nav>
@@ -35,7 +36,102 @@
     </header>
 
     <main>
-        
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h2>Capture Life’s Most Beautiful Moments</h2>
+                    <p>At <strong>Foteate with Aura</strong>, every photo tells a story. We create authentic, vibrant
+                        images
+                        that reflect who you are.</p>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="book.html" class="btn primary">Book with Us</a>
+                    <a href="services.html" class="btn secondary">Our Services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="about">
+            <div class="about-text">
+                <h2>Why Choose Aura?</h2>
+                <p>
+                    At <strong>Foteate with Aura</strong>, we blend creativity and emotion to
+                    create timeless images. Whether it’s a wedding, a portrait, or a family
+                    session, our focus is on capturing real moments that tell your story.
+                </p>
+                <ul>
+                    <li>📸 Professional equipment and lighting</li>
+                    <li>🌅 Natural and studio settings</li>
+                    <li>💬 Personalized experience for every client</li>
+                </ul>
+            </div>
+
+            <div class="about-image">
+                <img src="images/about-photo.jpg" alt="A mountain at night under a starry sky" loading="lazy">
+            </div>
+        </section>
+
+        <!-- REVIEWS SECTION -->
+        <section class="reviews">
+            <h2>What Our Clients Say</h2>
+
+            <div class="review-slider">
+                <div class="review-card active">
+                    <blockquote class="review-text">
+                        “Aura captured our wedding beautifully! Every photo feels alive.”
+                        <cite>Camila & Diego</cite>
+                    </blockquote>
+                    <div class="stars" aria-label="5 stars">★★★★★</div>
+                </div>
+
+                <div class="review-card">
+                    <blockquote class="review-text">
+                        “Super professional and friendly. The portraits were stunning!”
+                        <cite>Fernanda R.</cite>
+                    </blockquote>
+                    <div class="stars" aria-label="5 stars">★★★★★</div>
+                </div>
+
+                <div class="review-card">
+                    <blockquote class="review-text">
+                        “Loved our outdoor session! Natural light, laughter, and amazing results.”
+                        <cite>Luis & Andrea</cite>
+                    </blockquote>
+                    <div class="stars" aria-label="5 stars">★★★★★</div>
+                </div>
+
+                <div class="review-card">
+                    <blockquote class="review-text">
+                        “Our family session was pure fun — Aura made everyone feel so comfortable!”
+                        <cite>The Ramirez Family</cite>
+                    </blockquote>
+                    <div class="stars" aria-label="5 stars">★★★★★</div>
+                </div>
+
+                <div class="review-card">
+                    <blockquote class="review-text">
+                        “Amazing eye for detail! My graduation photos were absolutely perfect.”
+                        <cite>Daniela M.</cite>
+                    </blockquote>
+                    <div class="stars" aria-label="5 stars">★★★★★</div>
+                </div>
+
+                <div class="review-card">
+                    <blockquote class="review-text">
+                        “The event photos looked like something out of a magazine — thank you Aura!”
+                        <cite>Jonathan P.</cite>
+                    </blockquote>
+                    <div class="stars" aria-label="5 stars">★★★★★</div>
+                </div>
+            </div>
+
+            <div class="review-dots"></div>
+        </section>
+
+
     </main>
 
     <footer>

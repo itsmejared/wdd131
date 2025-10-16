@@ -59,17 +59,67 @@ if (form && modal && message && sessionSelect) {
     const session = form.session.value;
     const notes = form.message.value.trim();
 
+    let existing = [];
+    try {
+      existing = JSON.parse(localStorage.getItem("bookings")) || [];
+    } catch (e) {
+      console.warn("Corrupted localStorage data for bookings, resetting.");
+      localStorage.removeItem("bookings");
+    }
+
     const booking = { name, email, session, notes, date: new Date().toISOString() };
-    const existing = JSON.parse(localStorage.getItem("bookings")) || [];
     existing.push(booking);
     localStorage.setItem("bookings", JSON.stringify(existing));
 
     message.textContent = `Thanks for booking a session, ${name}! We'll be in touch soon.`;
     modal.classList.add("show");
 
-    // Close modal after 3 seconds
     setTimeout(() => modal.classList.remove("show"), 3000);
-
     form.reset();
   });
+}
+// ===== SIMPLE FADE REVIEW CAROUSEL =====
+const reviews = document.querySelectorAll(".review-card");
+const dotsContainer = document.querySelector(".review-dots");
+
+if (reviews.length > 1 && dotsContainer) {
+  let index = 0;
+  const delay = 5000;
+
+  // Create dots dynamically
+  dotsContainer.innerHTML = Array.from(reviews, (_, i) =>
+    `<span class="dot${i === 0 ? " active" : ""}" data-index="${i}"></span>`
+  ).join("");
+
+  const dots = dotsContainer.querySelectorAll(".dot");
+
+  function setActive(i) {
+    reviews[index].classList.remove("active");
+    dots[index].classList.remove("active");
+    index = i;
+    reviews[index].classList.add("active");
+    dots[index].classList.add("active");
+  }
+
+  function next() {
+    setActive((index + 1) % reviews.length);
+  }
+
+  let timer = setInterval(next, delay);
+
+  dotsContainer.addEventListener("click", (e) => {
+    const dot = e.target.closest(".dot");
+    if (!dot) return;
+    setActive(Number(dot.dataset.index));
+    restart();
+  });
+
+  const slider = document.querySelector(".review-slider");
+  slider.addEventListener("mouseenter", () => clearInterval(timer));
+  slider.addEventListener("mouseleave", restart);
+
+  function restart() {
+    clearInterval(timer);
+    timer = setInterval(next, delay);
+  }
 }
